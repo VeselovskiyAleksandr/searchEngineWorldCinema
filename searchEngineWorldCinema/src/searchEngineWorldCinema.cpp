@@ -1,11 +1,19 @@
 ﻿// searchEngineWorldCinema.cpp: определяет точку входа для приложения.
 
 #include "ConverterJSON.h"
+//#include "gtest/gtest.h"
 
 using namespace std;
 
+//TEST(sample_test_case, sample_test)
+//		{ 
+//			EXPECT_EQ(1, 1);
+//		}
+
 	int main()
 	{
+		
+
 		ConverterJSON converterJSON;
 		try
 		{
@@ -19,7 +27,7 @@ using namespace std;
 		converterJSON.openFile("requests.json");
 		converterJSON.openFile("answers.json");
 		converterJSON.getRequestsFunction(converterJSON.getRequests);
-		converterJSON.requerInputFunction(converterJSON.getRequests);
+//		converterJSON.requerInputFunction(converterJSON.getRequests);
 		auto start_time = chrono::high_resolution_clock::now();
 		converterJSON.wordCountFunction(converterJSON.countWordsMap);
 		converterJSON.searchAnswerFunction(converterJSON.countWordsMap, converterJSON.getRequests);
